@@ -111,7 +111,7 @@ const loop = () => {
 	ctx.fillText('Yarıçap : ' + r + " m", 20,130)
 	ctx.fillText('Çizgisel Hız : ' +Math.round( (vxVector**2 + vyVector**2)**0.5) + " m/s", 20,160)
 	ctx.fillText('Açısal Hız : ' + w + " rad/s", 20,190)
-	ctx.fillText('Frekans : ' + w / (2*Math.PI)+ " Hza", 20,220)
+	ctx.fillText('Frekans : ' + w / (2*Math.PI)+ " Hz", 20,220)
 	ctx.fillText('Periyot : ' + (2*Math.PI)/w+ " s", 20,250)
 	if(dev){
 
