@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		html,body{
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		#sim{
+/*			border: solid;*/
+			position: absolute;
+		}
+		#settings{
+			position: absolute;
+			border: solid;
+			right: 0;
+			padding: 10px;
+			background: white;
+			filter: invert(1);
+			font-family: arial;
+		}
+
+		input{
+			vertical-align: middle;
+			width: 100%;
+		}
+		span{
+			width: 10%;
+		}
+		*{box-sizing: border-box;}
+		#setting{
+			margin-bottom: 10px;
+		}
+
+		#info{
+			position: absolute;
+			bottom: 0;
+			padding: 20px;
+		}
+
+		#red{
+			background: red;
+		}
+
+		#green{
+			background: green;
+		}
+
+		#blue{
+			background: blue;
+		}
+
+		#info{
+			font-size: 20px;
+		}
+
+		#info div{
+			vertical-align: middle;
+			width: 20px !important;
+			height: 20px !important;
+			display: inline-block;
+		}
+
+
+/*		#sim{
+			border: solid red;
+		}
+*/	</style>
+</head>
+<body>
+	<div id="sim">
+		<div id="settings">
+			<div id="setting">
+				
+				Kütle :</span> <input type="range" id="mass" min="1" max="10" step="0.01" />
+			</div>
+			<div id="setting">
+				<span id="name">Açısal Hız :</span> <input step="0.01" type="range" min="1" max="10" id="velocity" />
+				
+			</div>
+			<div id="setting">
+				
+				<span id="name">Yarıçap :</span> <input type="range" id="radius" />
+			</div>
+					<button onclick="javascript:document.querySelector('#sim').requestFullscreen();onresize();">Tam Ekran</button>
+
+
+
+		</div>
+		<div id="info">
+			<div id="red"></div> Merkezcil Kuvvet <br/>
+			<div id="green"></div> Merkezcil İvme <br/>
+			<div id="blue"></div> Çizgisel Hız <br/>
+		</div>
+
+
+
+		
+		<canvas id="circ" width="1000" height="600"></canvas>
+	</div>
+		<!-- <canvas id="path" width="1000" height="600"></canvas> -->
+		<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
