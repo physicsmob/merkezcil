@@ -9,9 +9,11 @@ ctx.font = "20px Arial"
 }
 window.onresize = onresize
 let momentum = false
+let play = true
 
 let w = 1
 let dev = false
+
 
 // Math.round = t => t.toFixed(2)
 
@@ -60,7 +62,7 @@ let axVector = null
 let ayVector = null
 let wVector
 const loop = () => {
-
+if(!loop) return;
 	const prevX = x
 	const prevY = y
 
@@ -148,7 +150,8 @@ rRange.addEventListener('change' , e =>  {
 	r = e.target.value
 })
 
-
+const m =() => momentum = !momentum
+const pl = () => play = !play
 
 vRange.value = 1
 rRange.value = r
