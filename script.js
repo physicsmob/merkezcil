@@ -8,7 +8,7 @@ ctx.font = "20px Arial"
 
 }
 window.onresize = onresize
-
+let momentum = false
 
 let w = 1
 let dev = false
@@ -134,14 +134,17 @@ const rRange = document.querySelector('#radius')
 const mRange = document.querySelector('#mass')
 
 vRange.addEventListener('change' , e => w = (vRange.value))
-mRange.addEventListener('input' , e => mass = (e.target.value))
+mRange.addEventListener('input' , e => {
+if(momentum) w = w * (mass/e.target.value)**2
+mass = (e.target.value))
+}
 rRange.addEventListener('change' , e =>  {
 	vxVector = null
 	vyVector = null
 	axVector = null
 	ayVector = null
 
-	// w = w * (r/e.target.value)**2
+	if(momentum) w = w * (r/e.target.value)**2
 	r = e.target.value
 })
 
