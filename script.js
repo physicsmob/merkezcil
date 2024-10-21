@@ -137,7 +137,7 @@ vRange.addEventListener('change' , e => w = (vRange.value))
 mRange.addEventListener('input' , e => {
 if(momentum) w = w * (mass/e.target.value)**2
 mass = (e.target.value))
-}
+})
 rRange.addEventListener('change' , e =>  {
 	vxVector = null
 	vyVector = null
