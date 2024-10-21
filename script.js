@@ -62,7 +62,7 @@ let axVector = null
 let ayVector = null
 let wVector
 const loop = () => {
-if(!loop) return;
+if(!play) return;
 	const prevX = x
 	const prevY = y
 
