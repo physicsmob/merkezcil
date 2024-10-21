@@ -8,7 +8,7 @@ ctx.font = "20px Arial"
 
 }
 window.onresize = onresize
-let momentum = false
+let momentum = true
 let play = true
 
 let w = 1
